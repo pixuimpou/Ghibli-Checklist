@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+:root {
+    --grey: #eff0f1;
+    --darkGray: rgb(163, 163, 163);
+    --darkerGray: #ebecec;
+    font-family: 'Cuprum', sans-serif;
+}
+
+header {
+    background-color: var(--grey);
+    padding: 2rem 0 6rem;
+}
+
+header p {
+    margin: -1.5rem 2rem 0 0;
+    text-align: right;
+    font-size: 1.5rem;
+    color: rgb(59, 59, 59);
+}
+
+header img {
+    margin: auto;
+    display: block;  
+    max-width: 100%; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 1000px);
+    margin: -2rem auto 0;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--darkerGray);
+    margin: 0 2rem 2rem;
+    color: var(--darkGray);
+    cursor: pointer;
+    
+}
+
+.check-box{
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.check {
+    width: 50%;
+    height: 50%;
+    background-color: var(--darkGray);
+}
+
+.card.active {   
+    background-image: linear-gradient(120deg, #F0E1FF 0%, #E0EDFF 100%);
+    color: rgb(59, 59, 59);
+    box-shadow: 5px 3px 24px rgba(0, 0, 0, 0.08);
+}
+
+.warning {
+    color: rgb(226, 73, 46);
+    background: none;
+    margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .container {
+        flex-direction: row;
+    }
+    .card{
+        flex: 1 1 calc(50% - 8rem);
+    } 
+}
